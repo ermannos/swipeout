@@ -19,14 +19,10 @@ Thumbs.db
 *.log
 *.log.*
 node_modules
-dist
 build
-lib
 coverage
 _ts2js
-es
 ios
 android
 yarn.lock
-assets/index.css
 package-lock.json
