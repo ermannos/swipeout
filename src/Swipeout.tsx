@@ -19,15 +19,15 @@ function closest(el, selector) {
   return null;
 }
 
-export default class Swipeout extends React.Component <SwipeoutPropType, any> {
+export default class Swipeout extends React.Component<SwipeoutPropType, any> {
   static defaultProps = {
     prefixCls: 'rc-swipeout',
     autoClose: false,
     disabled: false,
     left: [],
     right: [],
-    onOpen() {},
-    onClose() {},
+    onOpen() { },
+    onClose() { },
   };
 
   openedLeft: boolean;
@@ -60,7 +60,7 @@ export default class Swipeout extends React.Component <SwipeoutPropType, any> {
   componentWillUnmount() {
     document.body.removeEventListener('touchstart', this.onCloseSwipe, true);
   }
-  
+
   componentDidUpdate() {
     this.btnsLeftWidth = this.left ? this.left.offsetWidth : 0;
     this.btnsRightWidth = this.right ? this.right.offsetWidth : 0;
@@ -108,7 +108,7 @@ export default class Swipeout extends React.Component <SwipeoutPropType, any> {
     const { moveStatus, srcEvent } = e;
     const { x: deltaX } = moveStatus;
     if (!this.swiping) {
-     return;
+      return;
     }
 
     // fixed scroll when it's pan and moving.
@@ -251,8 +251,8 @@ export default class Swipeout extends React.Component <SwipeoutPropType, any> {
       <div className={cls} {...divProps} >
         {/* 保证 body touchStart 后不触发 pan */}
         <div className={`${prefixCls}-cover`} ref={(el) => this.cover = el} />
-        { this.renderButtons(left, 'left') }
-        { this.renderButtons(right, 'right') }
+        {this.renderButtons(left, 'left')}
+        {this.renderButtons(right, 'right')}
         <Gesture
           onTouchMove={this.onTouchMove}
           onPanStart={this.onPanStart}
@@ -266,9 +266,9 @@ export default class Swipeout extends React.Component <SwipeoutPropType, any> {
         >
           <div className={`${prefixCls}-content`}>{children}</div>
         </Gesture>
-     </div>
+      </div>
     ) : (
-      <div {...refProps} {...divProps}>{children}</div>
-    );
+        <div {...refProps} {...divProps}>{children}</div>
+      );
   }
 }

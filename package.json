@@ -51,7 +51,7 @@
     "coverage": "rc-test run coverage",
     "rn-start": "node node_modules/react-native/local-cli/cli.js start",
     "prepublish": "rc-tools run guard",
-    //"prepare": "rc-tools run guard", // disabled to avoid node 12 errors
+    "prepare": "rc-tools run guard",
     "prepublishOnly": "rc-tools run guard"
   },
   "dependencies": {
@@ -61,19 +61,19 @@
     "react-native-swipeout": "^2.2.2"
   },
   "devDependencies": {
-    "@types/mocha": "~2.2.32",
+    "@types/mocha": "~7.0.1",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/react-native": "latest",
     "expect.js": "0.3.x",
     "pre-commit": "1.x",
     "rc-test": "~6.0.3",
-    "rc-tools": "6.x",
+    "rc-tools": "9.x",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-native": "~0.55.4",
-    "react-native-index-page": "~0.2.0",
-    "react-navigation": "1.0.0-beta.12"
+    "react-native": "~0.61.5",
+    "react-native-index-page": "~2.0.0",
+    "react-navigation": "4.1.1"
   },
   "typings": "./lib/index.d.ts",
   "pre-commit": [
